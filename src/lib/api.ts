@@ -126,7 +126,7 @@ export const userAPI = {
 
 // Skill APIs
 export const skillAPI = {
-  getAll: () => api.get('/api/user/skills/'),
+  getAll: () => api.get('/api/skills/'),
   
   create: (data: {
     name: string
@@ -134,31 +134,31 @@ export const skillAPI = {
     category: string
     level: string
     type: 'offer' | 'request'
-  }) => api.post('/api/user/skills/', data),
+  }) => api.post('/api/skills/', data),
 
   update: (id: string, data: { description?: string }) =>
-    api.put(`/api/user/skills/${id}/`, data),
+    api.put(`/api/skills/${id}/`, data),
 
-  delete: (id: string) => api.delete(`/api/user/skills/${id}/`),
+  delete: (id: string) => api.delete(`/api/skills/${id}/`),
 }
 
 // Swap APIs
 export const swapAPI = {
-  getAll: () => api.get('/api/user/swaps/'),
+  getAll: () => api.get('/api/swaps/'),
   
   create: (data: {
     requester_skill_id: string
     receiver_id: string
     receiver_skill_id: string
     proposed_time_slots: TimeSlot[]
-  }) => api.post('/api/user/swaps/', data),
+  }) => api.post('/api/swaps/', data),
 
-  accept: (id: string) => api.put(`/api/user/swaps/${id}/accept/`),
+  accept: (id: string) => api.put(`/api/swaps/${id}/accept/`),
   
   reject: (id: string, data: { reason: string }) =>
-    api.put(`/api/user/swaps/${id}/reject/`, data),
+    api.put(`/api/swaps/${id}/reject/`, data),
 
-  complete: (id: string) => api.put(`/api/user/swaps/${id}/complete/`),
+  complete: (id: string) => api.put(`/api/swaps/${id}/complete/`),
 }
 
 // Rating APIs
@@ -169,7 +169,7 @@ export const ratingAPI = {
     rated_id: string
     rating: number
     comment: string
-  }) => api.post('/api/user/ratings/', data),
+  }) => api.post('/api/ratings/', data),
 }
 
 // Admin APIs
