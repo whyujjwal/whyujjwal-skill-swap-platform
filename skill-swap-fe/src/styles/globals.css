@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Open+Sans:wght@400;600&display=swap');
+
+:root {
+  --background: #F8F9FA;
+  --accent: #4fd1c5; /* soft teal */
+  --accent2: #ff6f61; /* gentle coral */
+  --text: #343A40;
+  --card-bg: #fff;
+  --shadow: 0 2px 8px rgba(52, 58, 64, 0.06);
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  font-family: 'Open Sans', 'Roboto', Arial, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Poppins', 'Montserrat', 'Lato', Arial, sans-serif;
+  color: var(--text);
+}
+
+.card {
+  background: var(--card-bg);
+  box-shadow: var(--shadow);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background: #38b2ac;
+}
+
+.btn-secondary {
+  background: var(--accent2);
+  color: #fff;
+  border-radius: 8px;
+  padding: 0.5rem 1.25rem;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #e55d50;
+}
+
+/* Skeleton Loader */
+.skeleton {
+  background: #e2e8f0;
+  border-radius: 8px;
+  min-height: 1.2em;
+  animation: pulse 1.5s infinite;
+}
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
